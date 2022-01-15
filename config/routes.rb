@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   root 'catagories#splash'
+
   devise_for :users
   # authenticated :user do
   #   root 'catagories#index', as: :authenticated_root

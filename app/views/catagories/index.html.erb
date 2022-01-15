@@ -1,26 +1,18 @@
-<header>
-  <nav class="navbar navbar-expand-lg navbar-dark d-flex justify-content-between">
+<header class="container d-flex justify-content-between  align-items-center my-3">
     <div>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1" aria-controls="#navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+      <h5 class="text-brand-secondary">CATEGORIES</h5>
     </div>
     <div>
-      <h5>CATEGORIES</h5>
+      <%= button_to "Sign out", destroy_user_session_path,:method => :delete, class: "p-2 m-1 text-dark" %>  </div>
     </div>
+</header>
 
-    <div>
-      <%= link_to "Sign out", destroy_user_session_path, :method => :delete, class: "p-2 m-1 text-light" %>  </div>
-    </div>
-  </nav>
-<header>
-
-<div>
+<div class="container">
 <%= render 'categories' %>
 <div>
 
 <footer class="footer">
   <div class="footer-btn w-100 text-center">
-    <%= link_to "Add a new category", new_catagory_path %>
+    <%= link_to "Add a new category", new_catagory_path%>
   </div>
 </footer>

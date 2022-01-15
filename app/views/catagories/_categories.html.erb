@@ -2,24 +2,24 @@
 <% if @catagories.any?%>
 <% @catagories.each do |group| %>
   <div class="category-div d-inline-flex">
-  <div class="category-info">
-    <i class="fa fa-<%= group.icon %>"></i>
-</div>
+    <div class="category-info m-auto">
+     <i class="fa fa-<%= group.icon %>"></i>
+    </div>
     <div class="w-100 d-inline-flex justify-content-between">
-    <div>
-    <ul class="d-flex flex-column justify-content-center h-100">
+        <div>
+            <ul class="d-flex flex-column justify-content-center h-100">
    
-      <li> <p class="h2 pb-4"> <a href="/catagories/<%= group.id %>/items"><%= group.name %></a></p></li>
-      <li> <p> <%= group.created_at.strftime("%d-%b-%Y")%></p></li>
-    </ul>
-    </div>
+                 <li> <p class="h2 pb-4"> <a href="/catagories/<%= group.id %>/items"><%= group.name %></a></p></li>
+                 <li> <p> <%= group.created_at.strftime("%d-%b-%Y")%></p></li>
+             </ul>
+         </div>
     <div>
-    <ul class="d-flex flex-column justify-content-center h-100">
-    <li><p class="h3 pb-3 price"> $<%= group.total_amount(current_user.id)%></p></li>
-    </ul>
+         <ul class="d-flex flex-column justify-content-center h-100">
+              <li><p class="h3 pb-3 price"> $<%= group.total_amount(current_user.id)%></p></li>
+          </ul>
     </div>
     </div>
-  </div>
+</div>
 <%end%>
 <%else%>
 <p class="p-2 m-2 h3">There is no category added!!!</p>
