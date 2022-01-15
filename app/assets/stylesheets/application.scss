@@ -36,20 +36,20 @@ $primary-color:#3778c2;
 $secondary-color:#5fb523;
 $third-color:#434b54;
 
-.text-brand-primary{
-    color: $primary-color;
+.text-brand-primary {
+  color: $primary-color;
 }
 
-.text-brand-secondary{
-    color: $secondary-color;
+.text-brand-secondary {
+  color: $secondary-color;
 }
 
-.bg-brand-primary{
-    background-color: $primary-color;
+.bg-brand-primary {
+  background-color: $primary-color;
 }
 
-.bg-brand-secondary{
-    background-color: $secondary-color;
+.bg-brand-secondary {
+  background-color: $secondary-color;
 }
 
 @font-face {
@@ -75,52 +75,52 @@ li {
 }
 
 a {
-    text-decoration: none;
-    color: #434b54;
-    font-weight: 600;
-  }
+  text-decoration: none;
+  color: #434b54;
+  font-weight: 600;
+}
 
 .gradient-buttons .btn {
-    background-image: linear-gradient(to bottom, rgba(255,255,255,0.5), rgba(255,255,255,0.2) 49%, rgba(0,0,0,0.15) 51%, rgba(0,0,0,0.05));
-    background-repeat: repeat-x;
+  background-image: linear-gradient(to bottom, rgba(255,255,255,0.5), rgba(255,255,255,0.2) 49%, rgba(0,0,0,0.15) 51%, rgba(0,0,0,0.05));
+  background-repeat: repeat-x;
 }
 
 footer {
-    position: absolute;
-    width: 100%;
-    background-color: #5fb523;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    z-index: 999;
-    bottom: 0;
-    padding: 10px;
-  }
+  position: absolute;
+  width: 100%;
+  background-color: #5fb523;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  z-index: 999;
+  bottom: 0;
+  padding: 10px;
+}
 
   /* Category style */
 
 .category-div {
-    border: 1px solid white;
-    background-color: white;
-    width: 100%;
-  }
+  border: 1px solid white;
+  background-color: white;
+  width: 100%;
+}
   
-  .category-info {
-    font-size: 40px;
-  }
-  
-  .cd-btn {
-    font-size: 12px;
-    letter-spacing: 1px;
-    font-weight: 600;
-    margin-right: 10px;
-  }
-  
-  .customized-h5 h5 {
-    line-height: 0;
-  }
+.category-info {
+  font-size: 40px;
+}
 
-  /* Form style input */
+.cd-btn {
+  font-size: 12px;
+  letter-spacing: 1px;
+  font-weight: 600;
+  margin-right: 10px;
+}
+
+.customized-h5 h5 {
+  line-height: 0;
+}
+
+/* Form style input */
 .form-control:focus {
   color: #212529;
   background-color: #fff;
@@ -156,7 +156,3 @@ p.notice {
   font-weight: 600;
   font-style: italic;
 }
-
-
-
-
