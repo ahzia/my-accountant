@@ -1,0 +1,17 @@
+<%= form_for(@catagory, :url => catagories_path, :html => { :method => :post }) do |f| %>
+<section class="add-expenses">
+  <div class="add__amount">
+    <div class="add__title">Add Group</div>
+    <div class="add__option category-title">
+      <%= f.text_field :name, :placeholder => "Name", :class => "option-text" %>
+    </div>
+    <div class="add__option category-title">
+      <%= f.text_field :icon, :placeholder => "Icon", :class => "option-text" %>
+    </div>
+
+  <div class="add__button"><%= button_to "Save", catagories_path, :method => :post, :class => "add__save" %></div>
+  <%= link_to catagories_path, class: 'back__button' do %>
+  <%= fa_icon "arrow-left" %>
+  <% end %>
+</section>
+<% end %>
