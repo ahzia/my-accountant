@@ -1,0 +1,25 @@
+<header class="container d-flex justify-content-between  align-items-center my-3">
+    <%= link_to catagories_path do %>
+      <%= fa_icon "arrow-left" %>
+    <% end %>
+    <div>
+        <h5 class="text-brand-secondary">TRANSACTION</h5>
+    </div>
+  </nav>
+</header>
+<main class="container">
+  <div class="p-4 d-flex justify-content-between">
+		<p>Total Amount:</p>
+		<p class="fw-bold">$<%= @catagory.total_amount(current_user.id).round(2) %></p>
+  </div>
+  <div class="divider mb-2"></div>
+  <% @items.each do |item| %>
+    <%= render partial: "item_card", object: item , as: "item" %>
+  <% end %>
+  </div>
+</main>
+<footer class="footer">
+  <div class="footer-btn w-100 text-center">
+    <%= link_to "Add a new transaction", new_catagory_item_path %>
+  </div>
+</footer>

@@ -1,0 +1,158 @@
+/*
+
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+
+ * listed below.
+
+ *
+
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+
+ *
+
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+
+ * It is generally better to create a new file per style scope.
+
+ *
+
+ *= require_tree .
+
+ *= require_self
+
+ */
+
+// Custom bootstrap variables must be set or imported *before* bootstrap.
+@import "bootstrap";
+@import "font-awesome";
+
+$primary-color:#3778c2;
+$secondary-color:#5fb523;
+$third-color:#434b54;
+
+.text-brand-primary {
+  color: $primary-color;
+}
+
+.text-brand-secondary {
+  color: $secondary-color;
+}
+
+.bg-brand-primary {
+  background-color: $primary-color;
+}
+
+.bg-brand-secondary {
+  background-color: $secondary-color;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('Proxima-Nova.otf');
+}
+
+body {
+  background-color: whitesmoke;
+}
+
+h5 {
+  font-family: "proxima-nova-bold", sans-serif;
+  letter-spacing: 1px;
+}
+
+p {
+  font-family: "proxima-nova-light", sans-serif;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: #434b54;
+  font-weight: 600;
+}
+
+.gradient-buttons .btn {
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.2) 49%, rgba(0, 0, 0, 0.15) 51%, rgba(0, 0, 0, 0.05));
+  background-repeat: repeat-x;
+}
+
+footer {
+  position: absolute;
+  width: 100%;
+  background-color: #5fb523;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  z-index: 999;
+  bottom: 0;
+  padding: 10px;
+}
+
+/* Category style */
+
+.category-div {
+  border: 1px solid white;
+  background-color: white;
+  width: 100%;
+}
+
+.category-info {
+  font-size: 40px;
+}
+
+.cd-btn {
+  font-size: 12px;
+  letter-spacing: 1px;
+  font-weight: 600;
+  margin-right: 10px;
+}
+
+.customized-h5 h5 {
+  line-height: 0;
+}
+
+/* Form style input */
+.form-control:focus {
+  color: #212529;
+  background-color: #fff;
+  border-color: #3778c2;
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 10%);
+}
+
+/* Card style */
+.card.m-3.rounded,
+.card.rounded {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 20%);
+  transition: 0.3s;
+  padding: 2.5vh;
+}
+
+button.btn.btn-primary.cd-btn {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.transaction-card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 20%);
+  transition: 0.3s;
+  padding: 1vh;
+  margin-top: 3vh;
+}
+
+p.notice {
+  text-align: center;
+  padding: 10px;
+  color: #5fb523;
+  font-weight: 600;
+  font-style: italic;
+}

@@ -1,0 +1,8 @@
+<li class="container d-flex justify-content-between">
+  <div class="transaction-name">
+    <p class="transaction-name__text"><%= item.name.split(" ").map(&:capitalize).join(" ") %></p>
+  </div>
+  <div class="transaction-amount">
+    <p class="transaction-amount__text">-$<%= item.amount %></p>
+  </div>
+</li>
