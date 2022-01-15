@@ -10,14 +10,16 @@
 
 <section class="add-expenses">
   <div class="add__amount">
-    <div class="add__title">Add Group</div>
-    <%= f.number_field :amount, :placeholder => "Amount", :class => "add__amount-input", :id => "amount", :placeholder => "$0", :min => 0, :step => 0.01 %>
+    <div >
+    <h5>Add Group</h5>
+    </div>
+    <%= f.number_field :amount, :placeholder => "Amount", :class => "form-control m-2", :id => "amount", :placeholder => "$0", :min => 0, :step => 0.01 %>
     <div class="add__option category-title">
       <ion-icon name="clipboard-outline"></ion-icon>
-      <%= f.text_field :name, :placeholder => "Name", :class => "option-text", maxlength: 20 %>
+      <%= f.text_field :name, :placeholder => "Name", :class => "form-control m-2", maxlength: 20 %>
     </div>
   </div>
-  <div class="add__button"><%= button_to "Save",  catagory_items_path, :method => :post, :class => "add__save" %></div>
+  <div class="d-flex justify-content-center"><%= button_to "Save",  catagory_items_path, :method => :post, :class => "add__save" %></div>
   <br />
   <% end %> <%= link_to  catagory_items_path, class: 'back__button' do %>
   <ion-icon name="arrow-back" class="settings-button"></ion-icon>
