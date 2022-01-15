@@ -1,14 +1,5 @@
 Rails.application.routes.draw do
-  # get 'catagory/index'
-  # get 'catagory/create'
-  # get 'catagory/new'
-  # get 'catagory/destroy'
-  # get 'catagory/show'
-  # get 'item/index'
-  # get 'item/create'
-  # get 'item/new'
-  # get 'item/destroy'
-  # get 'item/show'
+  root 'catagories#splash'
   devise_for :users
   # authenticated :user do
   #   root 'catagories#index', as: :authenticated_root

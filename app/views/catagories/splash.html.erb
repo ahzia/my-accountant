@@ -1,0 +1,17 @@
+<main class="container">
+<section class="d-flex flex-column">
+  <h1 class="text-brand-primary align-self-center">My Accountant</h1>
+  <div class="welcome-image"><%= image_tag 'Wallet-rafiki.svg', class: 'welcome-illustration' %></div>
+  <div class="d-flex flex-column align-items-center">
+    <h2 class="text-brand-secondary">Welcome to your personal Accountant</h2>
+    <p>This is a mobile application that allows you to keep track of your expenses and incomes.</p>
+  </div>
+</section>
+<div class="gradient-buttons d-flex justify-content-center">
+  <% if current_user.present? %>
+  <%= link_to 'Get Started', catagories_path, class: 'btn btn-outline-success' %>
+  <% else %>
+  <%= link_to 'Login', new_user_session_path, class: 'btn btn-outline-primary' %>
+  <% end %>
+</div>
+</main>
