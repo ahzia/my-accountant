@@ -1,5 +1,4 @@
 class ItemsController < ApplicationController
-
   def index
     @catagory = Catagory.find(params[:catagory_id])
     @items = @catagory.items.where(author_id: current_user.id).order(created_at: :desc)
@@ -13,7 +12,7 @@ class ItemsController < ApplicationController
     @item = Item.new(item_params)
     @item.author = current_user
     @catagory = Catagory.find(params[:catagory_id])
-    # TODO: add a place in UI where users can select many catagories and the item will be added to all catagories selected
+    # TODO: users can select many catagories and the item will be added to all catagories selected
     if @item.save
       @item.catagories.push @catagory
       @item.save
@@ -34,5 +33,4 @@ class ItemsController < ApplicationController
   def item_params
     params.require(:item).permit(:name, :amount)
   end
-
 end
