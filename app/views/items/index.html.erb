@@ -18,7 +18,7 @@
   </div>
   <div class="divider mb-2"></div>
   <% @items.each do |item| %>
-  <%= render 'item', locals: { item: item } %>
+    <%= render partial: "item_card", object: item , as: "item" %>
   <% end %>
   </div>
 <footer class="footer">
