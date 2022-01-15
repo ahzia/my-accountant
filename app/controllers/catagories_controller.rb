@@ -1,8 +1,6 @@
 class CatagoriesController < ApplicationController
   def index
     @catagories = Catagory.all.order(:name)
-    # @entities = current_user.entities.where(group_id: params[:group_id]).order(created_at: :desc)
-    # current_user.total_expenses = current_user.items.sum(:amount).round(2)
   end
 
   def new
@@ -22,7 +20,10 @@ class CatagoriesController < ApplicationController
 
   def destroy; end
 
-  def show; end
+  def show
+    @catagory = Catagory.find(params[:id])
+    @items = @catagory.items.where(author_id: current_user.id).order(created_at: :desc)
+  end
 
   private
 

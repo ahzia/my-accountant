@@ -10,6 +10,10 @@ Rails.application.routes.draw do
   # get 'item/destroy'
   # get 'item/show'
   devise_for :users
+  # authenticated :user do
+  #   root 'catagories#index', as: :authenticated_root
+  # end
+  # root to: 'users#index'
   resources :catagories, only: %i[index show new create destroy] do
     resources :items, only: %i[index show new create destroy]
   end

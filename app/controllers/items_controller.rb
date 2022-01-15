@@ -1,5 +1,8 @@
 class ItemsController < ApplicationController
-  def index; end
+  def index
+    @catagory = Catagory.find(params[:catagory_id])
+    @items = @catagory.items.where(author_id: current_user.id).order(created_at: :desc)
+  end
 
   def create; end
 
