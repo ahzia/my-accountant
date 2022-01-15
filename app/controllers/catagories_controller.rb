@@ -25,6 +25,8 @@ class CatagoriesController < ApplicationController
     @items = @catagory.items.where(author_id: current_user.id).order(created_at: :desc)
   end
 
+  def splash; end
+
   private
 
   def set_catahory

@@ -1,17 +1,13 @@
-<header class="header">
-  <nav class="navbar navbar-expand-lg navbar-dark d-flex justify-content-between">
+<header class="container d-flex justify-content-between  align-items-center my-3">
+    <%= link_to catagories_path do %>
+      <%= fa_icon "arrow-left" %>
+    <% end %>
     <div>
-      <span class="text-light">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
-          <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
-        </svg>
-      </span>
-    </div>
-    <div>
-        <h5>TRANSACTION</h5>
+        <h5 class="text-brand-secondary">TRANSACTION</h5>
     </div>
   </nav>
 </header>
+<main class="container">
   <div class="p-4 d-flex justify-content-between">
 		<p>Total Amount:</p>
 		<p class="fw-bold">$<%= @catagory.total_amount(current_user.id).round(2) %></p>
@@ -21,6 +17,7 @@
     <%= render partial: "item_card", object: item , as: "item" %>
   <% end %>
   </div>
+</main>
 <footer class="footer">
   <div class="footer-btn w-100 text-center">
     <%= link_to "Add a new transaction", new_catagory_item_path %>

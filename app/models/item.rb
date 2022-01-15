@@ -4,5 +4,5 @@ class Item < ApplicationRecord
   has_many :catagories, through: :joins # Edit :needs to be plural same as the has_many relationship
 
   validates :name, :amount, presence: true, length: { maximum: 255 }
-  validates :amount, numerically: { greater_than: 0 }
+  validates :amount, numericality: { greater_than: 0 }
 end

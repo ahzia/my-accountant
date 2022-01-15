@@ -1,17 +1,24 @@
 <%= form_for(@catagory, :url => catagories_path, :html => { :method => :post }) do |f| %>
-<section class="add-expenses">
+<header class="container d-flex justify-content-between  align-items-center my-3">
+    <div>
+      <h5 class="text-brand-secondary">Add a new category</h5>
+    </div>
+</header>
+<section class="container">
   <div class="add__amount">
-    <div class="add__title">Add Group</div>
-    <div class="add__option category-title">
-      <%= f.text_field :name, :placeholder => "Name", :class => "option-text" %>
+    <h5>Add Group</h5>
+    <div  class="m-2">
+      <%= f.text_field :name, :autofocus => true, :placeholder => "Name", :class => "form-control", :required => true  %>
     </div>
-    <div class="add__option category-title">
-      <%= f.text_field :icon, :placeholder => "Icon", :class => "option-text" %>
+    <div  class="m-2">
+      <%= f.text_field :icon, :placeholder => "Icon", :class => "form-control" , :required => true  %>
     </div>
-
-  <div class="add__button"><%= button_to "Save", catagories_path, :method => :post, :class => "add__save" %></div>
-  <%= link_to catagories_path, class: 'back__button' do %>
+  <div class="d-flex flex-column justify-content-center align-items-center">
+  <p class="text-danger">Use Font Awesome Icon Class Name for Icon ex: "camera-retro" </p>
+  <div class="save-btn"><%= button_to "Save", catagories_path, :method => :post, :class => "save-btn" %></div>
+  <%= link_to catagories_path do %>
   <%= fa_icon "arrow-left" %>
   <% end %>
+  </div>
 </section>
 <% end %>
