@@ -1,12 +1,11 @@
 class CatagoriesController < ApplicationController
-
   def index
-    @catagories = Catagory.all
+    @catagories = Catagory.all.order(:name)
     # @entities = current_user.entities.where(group_id: params[:group_id]).order(created_at: :desc)
-    current_user.total_expenses = current_user.entities.sum(:amount).round(2)
+    # current_user.total_expenses = current_user.items.sum(:amount).round(2)
   end
 
-  def new 
+  def new
     @catagory = Catagory.new
   end
 
@@ -19,7 +18,6 @@ class CatagoriesController < ApplicationController
       flash[:error] = 'Catagory was not created.'
       render 'new'
     end
-
   end
 
   def destroy; end
@@ -35,5 +33,4 @@ class CatagoriesController < ApplicationController
   def catagory_params
     params.require(:catagory).permit(:name, :icon)
   end
-
 end

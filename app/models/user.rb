@@ -5,6 +5,6 @@ class User < ApplicationRecord
 
   has_many :Item
 
-  validate :name, :email, precence: true, length: {maximum: 255}
-  validate :email, uniqueness:true
+  validates :name, :email, presence: true, length: { maximum: 255 }
+  validates :email, uniqueness: true
 end
